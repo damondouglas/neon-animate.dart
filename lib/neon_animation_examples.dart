@@ -15,6 +15,6 @@ import 'cascaded.dart';
 class NeonAnimationExamples extends PolymerElement {
   NeonAnimationExamples.created() : super.created();
   @property
-  int selected = 1;
+  int selected = 0;
   attached() {}
 }

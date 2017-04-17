@@ -8,9 +8,7 @@ import 'package:polymer_elements/paper_button.dart';
 
 import 'package:polymer_elements/neon_animatable_behavior.dart';
 import 'package:polymer_elements/neon_animation_runner_behavior.dart';
-import 'package:polymer_elements/neon_animation/animations/transform_animation.dart';
 import 'package:polymer_elements/neon_animation/animations/scale_down_animation.dart';
-import 'package:polymer_elements/neon_animation/animations/slide_down_animation.dart';
 import 'package:polymer_elements/neon_animation/animations/cascaded_animation.dart';
 
 @PolymerRegister('x-cascaded')
