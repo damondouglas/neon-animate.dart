@@ -9,11 +9,12 @@ import 'package:polymer_elements/paper_tab.dart';
 import 'package:polymer_elements/iron_pages.dart';
 
 import 'basic.dart';
+import 'cascaded.dart';
 
 @PolymerRegister('neon-animation-examples')
 class NeonAnimationExamples extends PolymerElement {
   NeonAnimationExamples.created() : super.created();
   @property
-  int selected = 0;
+  int selected = 1;
   attached() {}
 }
