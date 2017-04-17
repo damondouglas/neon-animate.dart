@@ -1,0 +1,30 @@
+<head>
+  <!-- <link rel="import" href="../../packages/<some polymer package>/<some element>.html"> -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="import" href="basic.html">
+  <link rel="import" href="cascaded.html">
+</head>
+
+<dom-module id="neon-animation-examples">
+  <template>
+    <style>
+      :host {
+        --paper-tabs-selection-bar-color: blue;
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
+    <div>
+      <paper-tabs selected="{{selected}}">
+        <paper-tab>basic</paper-tab>
+        <paper-tab>cascaded-animation</paper-tab>
+      </paper-tabs>
+
+      <iron-pages selected="{{selected}}">
+        <section><x-basic></x-basic></section>
+        <section><x-cascaded></x-cascaded></section>
+      </iron-pages>
+
+
+    </div>
+  </template>
+</dom-module>
