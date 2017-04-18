@@ -1,0 +1,24 @@
+<head>
+  <!-- <link rel="import" href="../../packages/<some polymer package>/<some element>.html"> -->
+</head>
+
+<dom-module id="fade-in">
+  <template>
+    <style>
+      .square {
+        margin-top: 20px;
+        margin-left: 20px;
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+      }
+    </style>
+    <div>
+      <paper-button raised on-click="run">Run</paper-button>
+
+      <div class="square"></div>
+
+    </div>
+  </template>
+</dom-module>

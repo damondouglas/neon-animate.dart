@@ -14779,6 +14779,48 @@ Configuration:
 
 
 
+
+
+
+<!--
+`<fade-in-animation>` animates the opacity of an element from 0 to 1.
+
+Configuration:
+```
+{
+  name: 'fade-in-animation',
+  node: <node>
+  timing: <animation-timing>
+}
+```
+-->
+
+<script>
+
+  Polymer({
+
+    is: 'fade-in-animation',
+
+    behaviors: [
+      Polymer.NeonAnimationBehavior
+    ],
+
+    configure: function(config) {
+      var node = config.node;
+      this._effect = new KeyframeEffect(node, [
+        {'opacity': '0'},
+        {'opacity': '1'}
+      ], this.timingFromConfig(config));
+      return this._effect;
+    }
+
+  });
+
+</script>
+
+
+
+
   
   <!-- <link rel="import" href="../../packages/<some polymer package>/<some element>.html"> -->
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -14831,6 +14873,29 @@ Configuration:
   </template>
 </dom-module>
 
+  
+  <!-- <link rel="import" href="../../packages/<some polymer package>/<some element>.html"> -->
+<dom-module id="fade-in">
+  <template>
+    <style>
+      .square {
+        margin-top: 20px;
+        margin-left: 20px;
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+      }
+    </style>
+    <div>
+      <paper-button raised="" on-click="run">Run</paper-button>
+
+      <div class="square"></div>
+
+    </div>
+  </template>
+</dom-module>
+
 <dom-module id="neon-animation-examples">
   <template>
     <style>
@@ -14843,11 +14908,13 @@ Configuration:
       <paper-tabs selected="{{selected}}">
         <paper-tab>basic</paper-tab>
         <paper-tab>cascaded-animation</paper-tab>
+        <paper-tab>fade-in</paper-tab>
       </paper-tabs>
 
       <iron-pages selected="{{selected}}">
         <section><x-basic></x-basic></section>
         <section><x-cascaded></x-cascaded></section>
+        <section><fade-in></fade-in></section>
       </iron-pages>
 
 
